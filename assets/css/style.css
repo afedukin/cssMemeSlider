@@ -1,0 +1,22 @@
+.main_wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 20, 20, 10%);
+  padding: 2vw 2vh;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
