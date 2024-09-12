@@ -9,22 +9,33 @@
     <link rel="icon" href="./assets/img/favicon.ico" />
   </head>
   <body>
-    <div class="main_wrapper">
-      <div class="main">
-        <div class="section">
-          <div class="slider">
-            <img src="./assets/img/cat.jpg" alt="cat">
-          </div>
-          <h1 class="description"> Где кот?</h1>
+    <div class="wrapper">
 
-          
-          <div class="pagination">
-                <input checked type=radio name="slider" id="slide1"></input>
-                <input type=radio name="slider" id="slide2"></input>
-                <input type=radio name="slider" id="slide3"></input>
-                <input type=radio name="slider" id="slide4"></input>
-            </div>
-          </div>
+      <div class="radio_bottom">
+        <input type="radio" name="slides" id="point1" checked />
+        <input type="radio" name="slides" id="point2" />
+        <input type="radio" name="slides" id="point3" />
+        <input type="radio" name="slides" id="point4" />
+      </div>
+
+      <div class="wrapper_content">
+        <div class="slider">
+          <div class="slides img1"></div>
+          <div class="slides img2"></div>
+          <div class="slides img3"></div>
+          <div class="slides img4"></div>
+        </div>
+        <div class="description">
+          <div class="h2 desc1">Где кот?</div>
+          <div class="h2 desc2">Они такие милашки, едят с руки</div>
+          <div class="h2 desc3">Крутой лыжник</div>
+          <div class="h2 desc4">Никто не запомнит того, кто придёт вторым</div>
+        </div>
+        <div class="control">
+          <label for="point1"></label>
+          <label for="point2"></label>
+          <label for="point3"></label>
+          <label for="point4"></label>
         </div>
       </div>
     </div>
