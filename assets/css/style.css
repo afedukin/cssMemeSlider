@@ -1,71 +1,81 @@
+body {
+    background-color: rgb(20, 20, 20, 10%);
+}
+
+h2 {
+    color: white;
+}
+
 .wrapper {
-  margin: auto;
-  width: 64em;
+  max-width: 64em;
   height: auto;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  background-color: rgb(20, 20, 20, 10%);
 }
 .radio_bottom {
   display: none;
 }
 
 .wrapper_content {
-  width: 90em;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    margin: auto;
+    max-width: 62em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333;
 }
 
 .slider {
-  background-color: #333;
-  height: inherit;
+display: flex;
+  height: auto;
   overflow: hidden;
-  width: inherit;
-}
-.slides {
-  height: inherit;
-  opacity: 0;
-  width: 60rem;
-  transition: 1s;
-}
-.img1 {
-  background: url(/assets/img/cat.jpg) center / cover;
-}
-.img2 {
-  background: url(/assets/img/mimimi.jpeg) center / cover;
-}
-.img3 {
-  background: url(/assets/img/skimen.jpg) center / cover;
-}
-.img4 {
-  background: url(/assets/img/two.jpeg) center / cover;
+  max-width: 60rem;
+  column-gap: 1rem;
 }
 
-.wrapper .control {
-  position: absolute;
-  margin-left: -50px;
-  left: 50%;
+.slide img{
+  display: inline-block;
+  height: inherit;
+  width: 60rem;
+  transition: 1s;
+  object-fit: cover;
 }
-.wrapper label {
+
+.description {
+  max-width: 80%;
+}
+
+.wrapper_control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.control{
+    display: flex;
+}
+
+label {
   cursor: pointer;
   display: inline-block;
   height: 8px;
   margin: 10px;
-  position: relative;
   width: 8px;
   border-radius: 20%;
 }
-.wrapper label:after {
+label:after {
   border: 2px solid green;
   content: " ";
   display: block;
   height: 12px;
   left: -4px;
-  position: absolute;
   top: -4px;
   width: 12px;
   border-radius: 20%;
