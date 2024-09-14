@@ -108,19 +108,23 @@ label {
 input:nth-child(1):checked
   ~ .wrapper_control
   .control
+  .control_point:nth-child(1)
   .label_input:nth-child(1),
 input:nth-child(2):checked
   ~ .wrapper_control
   .control
-  .label_input:nth-child(2),
+  .control_point:nth-child(2)
+  .label_input,
 input:nth-child(3):checked
   ~ .wrapper_control
   .control
-  .label_input:nth-child(3),
+  .control_point:nth-child(3)
+  .label_input,
 input:nth-child(4):checked
   ~ .wrapper_control
   .control
-  .label_input:nth-child(4) {
+  .control_point:nth-child(4)
+  .label_input {
   background: orange;
 }
 
@@ -144,7 +148,7 @@ input:nth-child(4):checked
   .control
   label:nth-child(4):hover
   .label_input {
-  background: #3b33ad;
+  background: orange;
 }
 
 input:nth-child(1):checked ~ .wrapper_control .description .desc:nth-child(1),
@@ -171,12 +175,10 @@ input:nth-child(4):checked ~ .wrapper_control .description .desc:nth-child(4) {
   margin-left: -75%;
 }
 
-
 @media (max-width: 425px) {
-  .wrapper_control{
+  .wrapper_control {
     justify-content: center;
     flex-wrap: wrap-reverse;
     gap: 1em;
   }
-  
-  }
+}
