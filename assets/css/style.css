@@ -12,7 +12,7 @@ h3 {
 }
 
 .wrapper {
-  max-width: 42em;
+  max-width: 50em;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +30,6 @@ input {
 
 .wrapper_content {
   margin: auto;
-  max-width: 60em;
   width: 100%;
   height: auto;
   display: flex;
@@ -109,7 +108,7 @@ input:nth-child(1):checked
   ~ .wrapper_control
   .control
   .control_point:nth-child(1)
-  .label_input:nth-child(1),
+  .label_input,
 input:nth-child(2):checked
   ~ .wrapper_control
   .control
@@ -175,7 +174,7 @@ input:nth-child(4):checked ~ .wrapper_control .description .desc:nth-child(4) {
   margin-left: -75%;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .wrapper_control {
     justify-content: center;
     flex-wrap: wrap-reverse;
