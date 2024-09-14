@@ -4,48 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MemSlider</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/normalize.css" /> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" href="./assets/img/favicon.ico" />
   </head>
   <body>
     <div class="wrapper">
-
-      <div class="radio_bottom">
+      <div class="wrapper_content">
         <input type="radio" name="slides" id="point1" checked />
         <input type="radio" name="slides" id="point2" />
         <input type="radio" name="slides" id="point3" />
         <input type="radio" name="slides" id="point4" />
-      </div>
-
-      <div class="wrapper_content">
         <div class="slider">
-          <div class="slide">
-            <img class="img1 check_in" src="./assets/img/cat.jpg" alt="cat" width="60em" height="auto">
+          <div class="slide check_in">
+            <img src="./assets/img/cat.jpg" alt="cat" />
           </div>
           <div class="slide">
-            <img class="img2" src="./assets/img/mimimi.jpeg" alt="mimimi">
+            <img src="./assets/img/mimimi.jpeg" alt="mimimi" />
           </div>
           <div class="slide">
-            <img class="img3" src="./assets/img/skimen.jpg" alt="skimen">
+            <img src="./assets/img/skimen.jpg" alt="skimen" />
           </div>
           <div class="slide">
-            <img class="img4" src="./assets/img/two.jpeg" alt="number two">
+            <img src="./assets/img/two.jpeg" alt="number two" />
           </div>
         </div>
         <div class="wrapper_control">
-            <div class="description">
-                <h2 class="desc1 check_in">Где кот?</h2>
-                <h2 class="desc2">Они такие милашки, едят с руки</h2>
-                <h2 class="desc3">Крутой лыжник</h2>
-                <h2 class="desc4">Никто не запомнит того, кто придёт вторым</h2>
-              </div>
-              <div class="control">
-                <label for="point1"></label>
-                <label for="point2"></label>
-                <label for="point3"></label>
-                <label for="point4"></label>
-              </div>
+          <div class="description">
+            <h3 class="desc">Где кот?</h3>
+            <h3 class="desc">Они такие милашки, едят с руки</h3>
+            <h3 class="desc">Крутой лыжник</h3>
+            <h3 class="desc">Никто не запомнит того, кто придёт вторым</h3>
+          </div>
+          <div class="control">
+            <label class="control_point" for="point1">
+              <div class="label_input"></div>
+            </label>
+            <label class="control_point" for="point2">
+              <div class="label_input"></div
+            ></label>
+            <label class="control_point" for="point3"
+              ><div class="label_input"></div
+            ></label>
+            <label class="control_point" for="point4"
+              ><div class="label_input"></div
+            ></label>
+          </div>
         </div>
       </div>
     </div>

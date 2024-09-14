@@ -6,12 +6,13 @@ body {
   background-color: rgb(20, 20, 20, 10%);
 }
 
-h2 {
+h3 {
   color: white;
+  margin: 0;
 }
 
 .wrapper {
-  max-width: 64em;
+  max-width: 42em;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -19,108 +20,163 @@ h2 {
   align-content: center;
   margin: auto;
   padding: 0 1em;
+  background-color: #333;
+  border-radius: 0.5em;
 }
-.radio_bottom {
+
+input {
   display: none;
 }
 
 .wrapper_content {
   margin: auto;
-  max-width: 62em;
+  max-width: 60em;
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  border-radius: 0.5em;
-  background-color: #333;
+  overflow: hidden;
 }
 
 .slider {
   display: flex;
   height: auto;
-  overflow: hidden;
   width: 400%;
-  column-gap: 1rem;
+  margin-top: 0.5em;
 }
 
-.slide{
-  display: inline-block;
-  height: inherit;
-  max-width: 60rem;
+.slide {
+  width: 25%;
+  transition: 0.3s;
+  border-radius: 0.3em;
+}
+
+.slide img {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   border-radius: 0.5em;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
 }
 
-.slide img{
-    
-}
-
-.description {
+/* .description {
   max-width: 80%;
-}
+} */
 
 .wrapper_control {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  padding-top: 1em;
-  padding-left: 0.1em;
-  padding-right: 0.1em;
+  padding: 1em 0.5em;
 }
 
 .control {
   display: flex;
 }
 
+.desc {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
 label {
   cursor: pointer;
-  display: inline-block;
-  height: 8px;
-  margin: 10px;
-  width: 8px;
-  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  margin: 0.2em;
 }
-label:after {
-  border: 2px solid green;
-  content: " ";
-  display: block;
-  height: 12px;
-  left: -4px;
-  top: -4px;
-  width: 12px;
-  border-radius: 20%;
+
+.label_input {
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 40%;
+  background: white;
+}
+
+.label_input:hover {
+  background: #3b33ad;
 }
 
 .check_in {
-    transition: all 0.3s ease-out;
+  margin-left: 0%;
 }
 
-#point1:checked ~ .slider label:nth-of-type(1),
-#point2:checked ~ .slider label:nth-of-type(2),
-#point3:checked ~ .slider label:nth-of-type(3),
-#point4:checked ~ .slider label:nth-of-type(4) {
-  background: green;
+input:nth-child(1):checked
+  ~ .wrapper_control
+  .control
+  .label_input:nth-child(1),
+input:nth-child(2):checked
+  ~ .wrapper_control
+  .control
+  .label_input:nth-child(2),
+input:nth-child(3):checked
+  ~ .wrapper_control
+  .control
+  .label_input:nth-child(3),
+input:nth-child(4):checked
+  ~ .wrapper_control
+  .control
+  .label_input:nth-child(4) {
+  background: orange;
+}
+
+input:nth-child(1):checked
+  ~ .wrapper_control
+  .control
+  label:nth-child(1):hover
+  .label_input,
+input:nth-child(2):checked
+  ~ .wrapper_control
+  .control
+  label:nth-child(2):hover
+  .label_input,
+input:nth-child(3):checked
+  ~ .wrapper_control
+  .control
+  label:nth-child(3):hover
+  .label_input,
+input:nth-child(4):checked
+  ~ .wrapper_control
+  .control
+  label:nth-child(4):hover
+  .label_input {
+  background: #3b33ad;
+}
+
+input:nth-child(1):checked ~ .wrapper_control .description .desc:nth-child(1),
+input:nth-child(2):checked ~ .wrapper_control .description .desc:nth-child(2),
+input:nth-child(3):checked ~ .wrapper_control .description .desc:nth-child(3),
+input:nth-child(4):checked ~ .wrapper_control .description .desc:nth-child(4) {
+  height: auto;
+  opacity: 1;
+}
+
+#point1:checked ~ .slider .check_in {
+  margin-left: 0;
+}
+
+#point2:checked ~ .slider .check_in {
+  margin-left: -25%;
+}
+
+#point3:checked ~ .slider .check_in {
+  margin-left: -50%;
+}
+
+#point4:checked ~ .slider .check_in {
+  margin-left: -75%;
 }
 
 
-#radio-btn1:checked ~ .slider .check_in {
-    margin-left: 0;
-}
-
-#radio-btn2:checked ~ .slider .check_in {
-    margin-left: -25%;
-}
-
-#radio-btn3:checked ~ .slider .check_in {
-    margin-left: -50%;
-}
-
-#radio-btn4:checked ~ .slider .check_in {
-    margin-left: -75%;
-}
+@media (max-width: 425px) {
+  .wrapper_control{
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 1em;
+  }
+  
+  }
